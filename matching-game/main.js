@@ -8,8 +8,13 @@ const $root = document.querySelector('#root');
 
 const $htmlBoardGame = BoardGame(6);
 
-const $htmlPlayerName = PlayerName("Player 1");
-
-$root.insertAdjacentHTML('beforeend', $htmlBoardGame);
-
-$root.insertAdjacentHTML('afterbegin', $htmlPlayerName);
+const $htmlPlayer1Name = PlayerName("Player 1");
+const $htmlPlayer2Name = PlayerName("Player 2");
+$root.insertAdjacentHTML(
+    'beforeend',
+    `
+        ${PlayerName("Player1")}
+        ${PlayerName("Player2")}
+        ${BoardGame(6)}
+    `
+    );
